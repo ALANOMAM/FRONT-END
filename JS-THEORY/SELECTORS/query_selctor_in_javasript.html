@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body>
+<h1 id="title">grande</h1>
+<h2 class="pippo">medio</h2>
+<h3 id="pappo">piccolo</h3>
+
+<a href="#">link</a>
+
+
+<ul>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+<li>4</li>
+</ul>
+
+<script>
+/* i query selectors sono una tipologia piu recente di selettori, si possono selezionare
+elementi per class name, id e anche per tipologia, cioe posso selezionare 
+un elemento perche e un paragrafo, uno span ecc .*/
+ 
+document.querySelector("#title").style.color="green" // con questo seleziono  e modifico un ID e ci va #
+document.querySelector(".pippo").style.color="red" // con questo seleziono e modifico una CLASSE e ci va il .
+document.querySelector("h3").style.color="yellow" // con questo seleziono  e modifico un elemneto per TIPOLOGIA, in questo caso h3.
+
+
+document.querySelector("li:nth-child(3)").style.color="blue" // in questo caso seleziono e modifico un qualsiasi elemento in una LISTA, in questo caso preciso seleziono il terzo elemento.
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,46 @@
+body{
+background-color: blanchedalmond;
+font-size: 2rem;
+} 
+
+ol{
+  list-style-type: decimal; 
+   /* the above xtic gives us what we will have
+   at the left of each element, the default value 
+   is generally "decimal", so we have numbers, but 
+   we can change if we want*/
+
+}
+
+ul{
+    list-style-type: square;
+    text-align: center;
+    /* the text-align property above makes us move
+    the elements of the list where we want them to go.*/
+    list-style-position: inside;
+    /* this makes us move the bullet points so 
+    that they match the position of the text
+    because with the "text-aligh" property, only 
+    the text moves, not the bulets*/
+    color:blue;
+    line-height:1.6;
+    /*list-style-image: url();*/ 
+
+    /* the "list-style-image" above gives us the possibility
+    to ad an image as bulet if we want, we would have to provide 
+    a link though*/
+
+}
+
+
+ol li{
+    color:red;
+    /* here we changed the elements of the ordered list
+    to red*/
+}
+
+ol li:nth-child(2){
+    color:green;
+
+}
+

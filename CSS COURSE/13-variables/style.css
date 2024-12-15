@@ -1,0 +1,80 @@
+/* Lets suppose we used a specific color more than once 
+in our project and at a certain point our client wanted to change the color
+we would need to look for every instance of that color and it would be stressful
+an alternative would be to save the color as a variable that can be modified once*/
+
+
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    }
+    
+/* || VARIABLES */
+:root{
+/* FONT*/
+--FF:'Courier New', Courier, monospace; /* font family*/
+--FS:1.5rem;/* font size*/
+--FS-XL: 3rem;
+/*COLOR*/
+--BGCOLOR: blanchedalmond; /* how i create a variable for the background color. it must not be in capital letters by force*/
+--ALT-BGCOLOR:  rgb(61, 59, 59); /* for header and footer*/
+--RADIAL-COLOR: whitesmoke;
+--LIGHT-COLOR: whitesmoke; /* we can use two different variables and give them tha same color*/
+--DARK-COLOR: black;
+
+}
+
+
+
+
+    body{
+        font:var(--FS) var(--FF);
+        background-color: var(--BGCOLOR); /* how we call our variable*/
+        min-height: 100vh;
+        font-size: 1.5rem;
+    background-image: radial-gradient(var(--RADIAL-COLOR), var(--BGCOLOR));
+    display: flex;
+    flex-direction: column;
+    
+    }
+    
+    
+    header, nav, main, footer{
+        display: grid;
+        place-content: center;
+        grid-template-columns: 100%;
+        text-align:center;
+    }
+    
+    header, footer{
+    position:sticky;
+    background-color: var(--ALT-BGCOLOR) ;
+    color: var(--LIGHT-COLOR);
+    
+    }
+    
+    header{
+        top:0;
+    }
+    
+    nav{
+        background-color: var(--LIGHT-COLOR);
+        color:var(--DARK-COLOR);
+        padding: 0.5rem;
+        border-bottom: 2px solid var(--DARK-COLOR);
+    }
+    
+    
+    main{
+        flex-grow: 1;
+    }
+    
+    footer{
+        bottom:0;
+    }
+    
+     
+    

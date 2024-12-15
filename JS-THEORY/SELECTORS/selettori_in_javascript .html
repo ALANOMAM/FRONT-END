@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body>
+<h1 id="title">grande</h1>
+<h2 id="pippo">medio</h2>
+<h3 id="pappo">piccolo</h3>
+
+<P class="family">MI CHIAMO ALAN</P>
+<P class="family">MI CHIMAO ANDY</P>
+<P class="family">MI CHIMAO DEBORA</P>
+<P class="family">MI CHIMAO GIADA</P>
+
+<a href="#">link</a>
+
+
+<ul>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+<li>4</li>
+</ul>
+
+<script>
+/*i selttori come il loro nome indoca ci permettono d selezionare elementi del nostro codice
+ un esempio di selettori e GETELEMENTBYID() ecc che e un metodo.
+chiaro che una volta che si usa un selettore possiamo prendere e/o modificare l'elemento selezionato.*/
+ 
+//document.getElementById("title") // con questo seleziono solo l'elemento.
+
+//CAMBIARE STILE
+document.getElementById("title").style.color="blue" // con questo ho selezionato, e cambiato il colore del mio elemento.
+document.getElementById("title").style.background="lightpink"
+
+//CAMBIARE VALORE
+document.getElementById("pippo").textContent="hello world"
+document.getElementById("pappo").innerHTML="hello world 2"
+
+//CREARE UN  HTML COLLECTION (SIMILE AD UN ARRAY) CON I SELETTORI
+const famiglia =document.getElementsByClassName("family")// qui praticamente selezionando tutti gli element che hanno la stessa classe creo un html collection di elementi, che ho salvato in una costante.
+famiglia[2].style.color="blue"; //questo dovrebbe cambiare il colore di "mi chiamo debora"
+
+const lista=document.getElementsByTagName("li") //qui seleziono tutti gli elementi che hanno la stessa tipologia, in questo caso li e mi creo un html colection
+console.log(lista) // per vedere l'html collection.
+
+const listaArray= Array.from(lista); // il commando "Array.from()" trasforma in vero erray tutto quello che e simile ad un array. nel nostro caso il nostro html collection.
+console.log(listaArray) //il motivom per cui passo da fac simile a vero array e perche cosi posso applicare tutte le proprietà degli array.
+
+</script>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: blanchedalmond;
+   
+}
+
+
+#circle{
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    border-style: solid;
+    transform: rotate(0deg);
+    transition:1s;
+    
+}
+
+.family1{
+position: relative;
+top:30px;
+left:370px;
+
+}
+
+.family2{
+ position: relative;  
+ top:730px;
+ left: 370px; 
+}
+
+.family3{
+  position: relative;  
+  top:350px;
+  left: 30px;
+}
+
+.family4{
+  position: relative;  
+  top:350px;
+  left:700px;
+}
+
+.controls{
+    position: absolute;
+    top:400px;
+    left:1200px;
+}

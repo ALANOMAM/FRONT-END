@@ -1,0 +1,134 @@
+/* There are many different types of functions in css
+but tody for semplicity we are going to focus on the math functions*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    }
+    
+/* || VARIABLES */
+:root{
+/* FONT*/
+--FF:'Courier New', Courier, monospace; 
+--FS:min(2.25rem, 3vh); 
+/* the min function will select the smallest of the two numbers, we generally always have one absolute value and a relative one*/
+--FS-XL: 3rem;
+/*COLOR*/
+--BGCOLOR: blanchedalmond;
+--ALT-BGCOLOR:  rgb(61, 59, 59); 
+--RADIAL-COLOR: whitesmoke;
+--LIGHT-COLOR: whitesmoke; 
+--DARK-COLOR: black;
+
+}
+
+
+
+
+    body{
+        font:var(--FS) var(--FF);
+        background-color: var(--BGCOLOR); 
+        min-height: 100vh;
+        font-size: 1.5rem;
+    background-image: radial-gradient(var(--RADIAL-COLOR), var(--BGCOLOR));
+    display: flex;
+    flex-direction: column;
+    
+    }
+    
+    
+    header, nav, footer{
+        display: grid;
+        place-content: center;
+        grid-template-columns: 100%;
+        text-align:center;
+    }
+    
+    header, footer{
+    position:sticky;
+    background-color: var(--ALT-BGCOLOR) ;
+    color: var(--LIGHT-COLOR);
+    
+    }
+    
+    header{
+        top:0;
+    }
+    
+    nav{
+        background-color: var(--LIGHT-COLOR);
+        color:var(--DARK-COLOR);
+        padding: 0.5rem;
+        border-bottom: 2px solid var(--DARK-COLOR);
+    }
+    
+    
+    main{
+        flex-grow: 1;
+        display:flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+    }
+    
+
+main section{
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+main aside{
+background-color: rgb(231, 135, 135);
+color: var(--LIGHT-COLOR);
+font-size: var(--FS);
+font-style:italic ;
+padding: 1rem;
+}
+
+ .content{
+    margin-top:20px;
+ }
+
+ .tooltip{
+    border-bottom: 1px dashed blue;
+    position: relative;
+ }
+
+ .tooltip:hover::before{
+    content: attr(data-tooltip);
+    position:absolute;
+    top: -20px;
+    white-space: nowrap;
+    background-color: var(--DARK-COLOR);
+    padding:1px;
+    border-radius: 15px ;
+ }
+
+a:any-link{
+    color: firebrick;
+}
+
+a:hover,a:focus{
+    filter:brightness(150%) /* the "filter has different functions like the "brightness" function for example*/
+}
+
+    footer{
+        bottom:0;
+    }
+
+    @media screen and (min-width:576px){
+       main{
+        flex-flow:row nowrap;
+        justify-content: space-between;
+       } 
+
+       main section{
+        width: calc(70% - 5px)
+       }
+
+       main aside{
+        width: calc(30% - 5px)
+       }
+    }
+    
+    /* NB: check out the "max()" function, the "clamp()" function 

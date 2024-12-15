@@ -1,0 +1,24 @@
+
+/* the different elements of the box model moving from inside out
+are CONTENT, PADDING, BORDER and  MARGIN all can be seen with the inspect option*/
+
+*{
+margin:0;
+padding:0;
+box-sizing: border-box; 
+/* "border-box" helps us with our calculations in the sense that if for example i give
+a "width:400px" to a selector, the 400px include the space for the content of the selector, the padding
+and the border so i actually have 380px of content. while normally the 400px would be just for the content.*/
+
+}
+
+
+
+.container{
+border:2px dashed red;
+font-size:1.5rem;
+padding:1.5rem;
+margin:1.5em; /* this applies to top, right, bottom and left in this order. so its the same as writing "margin: 1.5em 1.5em 1.5em 1.5em"*/
+padding:1.5em; /*the same logic applies to the padding*/
+}
+

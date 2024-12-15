@@ -1,0 +1,31 @@
+.container{
+    margin-top: 40px;
+}
+
+.green-nested {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.center{
+    gap:5px;
+    padding:10px ;
+}
+
+.big-height{
+    height: 100px;
+}
+
+[class*="col-"]{
+    background-color:rgba(0, 108, 250, 1) ;
+    border: 1px white solid;
+    color:white;
+}
+
+[class*="green-"]{
+    background-color:rgba(0, 225, 101, 1);
+    border: 1px rgba(0, 225, 101, 1) solid;
+}

@@ -1,0 +1,174 @@
+
+/* reset */
+* {
+    
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+
+
+}
+/* reset */
+
+body{
+    background-image: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3BmLXMxMjUtYWtlNzAwNV8yLmpwZw.jpg');
+    background-size: cover;
+}
+
+main {
+
+    /* due proprietà: primo valore verticale, secondo orizzontale */
+    padding: 10px 50px;
+
+   /* background-image: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3BmLXMxMjUtYWtlNzAwNV8yLmpwZw.jpg');*/
+   /* background-size: cover;*/
+}
+
+
+/* header */
+
+header {
+    
+    padding-bottom: 20px;
+
+    border-bottom: white 2px solid;
+
+     /* 
+    
+  NB: il concetto sotto vale per padding,margin ecc quando mettiamo uno,due tre o quatro numeri
+
+    una proprietà: su, giù, sinistra e destra insieme
+    due proprietà: su e giù insieme, sinistra e destra insieme
+    tre proprietà: su, sinistra e destra insieme, giù
+    quattro proprietà: su, destra, giù, sinistra
+
+    */
+
+    margin-bottom: 16px; /*  qui il padding ha solo una proprietà, quindi va in senso orario cioè, SU, DESTRA, GIU,SINISTRA*/
+}
+
+#logo {
+    height: 100px;
+
+    /* proprietà che allinea un'immagine (di solito) alla linea del testo adiacente */
+    vertical-align: middle;
+}
+
+h1 {
+    display: inline-block;
+
+    color: white;
+}
+/* fine header */
+
+
+/* search */
+#search {
+    margin-bottom: 16px;
+}
+/* fine search */
+
+
+/* unread */
+#unread {
+    color: white;
+
+    padding-bottom: 16px;
+
+    border-bottom: 2px solid white;
+}
+
+#unread-number {
+     display: inline-block; /*QUESTA RIGA E FONDAMENTALE perche lo span è inline di natura e se metti "width" e "height" non cambierà niente se prima non lo trasformi nell'ibrido inline-block*/
+
+    background-color: #faa501;
+    
+    width: 30px;
+    height: 30px;
+
+    padding-top: 7px;
+
+    border-radius: 20px;
+
+    text-align: center;
+    vertical-align: middle;
+
+
+    /* proprietà da approfondire: */
+    /* line-height */
+}
+
+/* fine unread */
+
+
+/* sezione email */
+
+#emails {
+    background-color: #d3d3d3;
+
+    padding-bottom: 12px;
+
+    border-bottom: solid 2px white;
+}
+
+
+.email {
+    padding: 4px;
+
+    border: solid 1px black;
+    
+}
+
+.read {
+    background-color: white;
+}
+
+p {
+    display: inline-block;
+}
+
+/* fine sezione email */
+
+
+
+/* footer */
+footer {
+    text-align: center;
+    padding: 12px;
+    color: white;
+}
+
+em {
+    font-size: 0.7em;
+}
+
+/* fine footer */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+     
+ 

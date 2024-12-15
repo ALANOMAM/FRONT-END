@@ -1,0 +1,39 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* reset */
+
+
+.container {
+    height: 400px;
+
+    background-color: #3535ec;
+}
+
+
+
+@media screen and (max-width: 480px) {
+    .container {
+        background-color: #00de6b;
+        color: white;
+    }
+}
+
+
+
+@media screen and (min-width: 1440px) {
+    .container {
+        background-color: #f71668;
+    }
+}
+
+
+/* sotto i 300px lo sfondo è nero */
+@media screen and (max-width: 300px) {
+    .container {
+        background-color: black;
+    }
+}

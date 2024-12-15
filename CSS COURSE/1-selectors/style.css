@@ -1,0 +1,46 @@
+/* there are four main types of selctors in css
+1-ELEMENT SELECTOR ( e.g body element, paragraph element ecc)
+2-CLASS ( this is a more specific selector and often overrights the element selector)
+3- ID ( this is even more specfic than class and element selectors but it is not very good practice to use them often)
+4- UNIVERSAL SELECTOR (not used often but we should know iu exists. this selects everything)
+*/
+
+body{ /*this is an example of element selector, i just selected the body element*/
+font-size: 22px;
+
+}
+
+p{
+ color: purple;   
+}
+
+.gray { /* this is another type of selector, mainly a class*/
+color: gray; /* in this case, only the second paragraph will turn gray b/c it has a class called gray*/
+
+}
+
+#third{ /*this is yet another type of selector, mainly an ID selector*/
+
+font-style: italic;
+}
+
+*{ /*universal selector*/
+    font-family: monospace;
+}
+
+/*--------------------LETS SEE HOW WE CAN USE OUR LEARNED NOTIONS--------------------------------------------------------------*/
+
+h1,h2{ /*we can group select*/
+
+  color:pink;  
+
+}
+/*NB: when group selcting it is important to put a comma to say that we want distinct elements,
+if we dont it will mean that we are looking for one element inside the other
+like "h1,h2" means select h1 and h2 while "h1 h2" means select the h2 elements inside h1*/
+
+p span{ /*i am selecting all the span elements inside the p*/
+text-transform: uppercase;
+background-color: gold;
+
+}

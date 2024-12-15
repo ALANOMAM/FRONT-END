@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRENO BIGLIETTO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--start form-->
+  <div class="form">
+  <div class="subForm">
+    <div class="info">
+        <label for="userIdentity">Nome e Cognome</label>
+       <input type="text" id="userIdentity">
+    </div>   
+
+    <div class="info">
+ <label for="userAge">Inserisci la tua età</label>
+<input type="number" id="userAge">
+   </div>
+
+   <div class="info">
+<label for="userDistance">distanza da percorrere</label>
+<input type="number" id="userDistance">
+   </div>
+</div>
+
+ <div>
+<button id="btn">INVIA INFO</button>
+ </div>
+
+  </div>
+  <!--end form--> 
+
+  <!--start biglietto-->
+  <div class="biglietto">
+
+    <strong>DETTAGLIO PASSEGGERI</strong>
+    <div class="subBiglietto">
+    <div>
+    <strong>NOME PASSEGGERO</strong>
+    <span id="identity"><b>nome cognome</b></span>
+    </div>     
+
+
+    <div>
+     <b>Offerta</b>   
+    <span id="offer">offerta </span>
+    </div>
+
+    
+    <div>
+     <b>Carrozza</b>   
+       <span>10</span>
+    </div>
+   
+    <div>
+    <b>Codice CP</b>   
+     <span>106728</span>
+    </div>
+      
+   <div>
+    <b>Costo biglietto</b>
+    <span id="result">prezzo</span>
+   </div>
+   
+  </div>
+ 
+   </div>
+   <!--end biglietto-->
+
+
+
+<script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+}
+
+body{
+    background-color: blanchedalmond;
+    min-height: 100vh;
+    font-size: 1.5rem;
+background-image: radial-gradient(whitesmoke, blanchedalmond);
+display: flex;
+flex-direction: column;
+
+}
+
+/* the syntax of a media query is:
+@media MEDIA TYPE and (CONDITION: BREAKPOINT){
+css rules.
+} */
+
+header, nav, main, footer{
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    text-align:center;
+}
+
+header, footer{
+position:sticky;
+background-color: rgb(58, 57, 57) ;
+color: whitesmoke ;
+
+}
+
+header{
+    top:0;
+}
+
+nav{
+    background-color: white;
+    color:black;
+    padding: 0.5rem;
+    border-bottom: 2px solid black;
+}
+
+
+main{
+    flex-grow: 1;
+}
+
+footer{
+    bottom:0;
+}
+
+ /* MEDIA QUERY*/
+@media screen and (min-width: 576px) 
+/* the styles we will be setting will be
+ valid if our screen is 576px and above*/
+{
+    body{
+background-color: green;
+background-image:radial-gradient(whitesmoke,green) ;
+    }
+
+nav{
+    display:none;
+}
+
+}
+
+
+@media screen and (min-width: 600PX) 
+
+{
+    body{
+background-color: GOLD;
+background-image:radial-gradient(whitesmoke,GOLD) ;
+    }
+
+nav{
+    display:none;
+}
+
+}

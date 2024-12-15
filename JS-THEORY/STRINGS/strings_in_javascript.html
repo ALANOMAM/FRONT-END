@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+<script>
+
+/* 20 String Methods */
+
+var stringOne = "freeCodeCamp is the best place to learn"
+var stringTwo = "frontend and backend development"
+
+// charAt()
+console.log(stringOne.charAt(1))   //this returns the character whose position we have specified, we'll have "r" as output. 
+
+// charCodeAt()
+console.log(stringOne.charCodeAt(1)) // this returs the UNICODE of the character at the specified index, will have "114" which is unicode for "r"
+
+// concat()
+console.log(stringOne.concat(stringTwo)) // this unites two or more strings together 
+
+// endsWith()
+console.log(stringOne.endsWith("to")) // this checks if a string ends with a specified string or character, in this case we will have "false" because our string does not end with the word "to"
+
+// fromCharCode()
+console.log(String.fromCharCode(114)) // this converts unicode values to its corresponding character, will have "r" as output.
+
+
+// includes()
+console.log(stringTwo.includes("end")) //this checks if a string contains a specified string or character, in this case we will have "true" in our output.
+
+
+// indexOf()
+console.log(stringTwo.indexOf("end")) // this returns the index of the first found occurance of the first letter of a specified string or character, in our case we will have "5" because the word "end" starts at index 5
+
+// lastIndexOf()
+console.log(stringTwo.lastIndexOf("end")) // this returns the index of the last found occurance of the first letter of a specified string or character, in our case we will have "17" because the last occurence of the word "end" starts at index 17
+
+// match()
+console.log(stringTwo.match(/end/g)) // this is gonna search a string for a match against a REGULAR EXPRESSION and return the matches, this will give us "["end","end"]" in output because the word "end" is in string two, two times.
+
+// repeat()
+console.log(stringOne.repeat(3)) // this will return a new string with a set number of copies of an existing string, this will give us string one repeated three times as a result.
+
+
+// replace()
+console.log(stringTwo.replace(/end/g, "END")) // this searches a string for specified values or regular expressions a replaces them with other specified values or regular expressions, this will give us "frontEND and backEND development" as a result.
+
+// search()
+console.log(stringTwo.search("end")) //this is gonna parse a string for specified values or regular expressions and return the postion of the match, we will have "5" as output.
+
+// slice()
+console.log(stringTwo.slice(2, 4)) //this is gonna extract a part of a string and return it, in this case we will have "on" as output because 2 is the first index and 4 is the index after it ends. 
+            // slice(start), if it only has one number
+            //slice(start, end), if it has two numbers
+
+// split()
+console.log(stringOne.split(" ")) // this is gonna split a string into an array of substings, as a result i will have an array of each word because i applied the split every time it found a space. 
+
+// startsWith()
+console.log(stringOne.startsWith("free")) //this is gonna parse through our string and check if it begins with a specified character or string, the result in this case will be "true"
+
+// substr()
+console.log(stringTwo.substr(2, 4)) // this is similar to "slice()" with the diffence that in this case, it will start with character 2 and output 4 characters, so as a result we will have "onte"
+
+// substring()
+console.log(stringTwo.substring(2, 4)) //this is pretty much identical to slice, in fact our result will be "on" here also.
+
+// toLowerCase()
+console.log(stringOne.toLowerCase())
+
+// toUpperCase()
+console.log(stringOne.toUpperCase())
+
+// trim()
+var stringThree = "     Subscribe now!      "; // trim removes white space from either sides of the string, so considering our new string three, the result will be "subscribe now" without the excess space before and after. 
+console.log(stringThree.trim())
+
+</script>
+
+</body>
+</html>

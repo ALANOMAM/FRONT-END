@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<script>
+/* Map lets you take an array of items and then convets each item
+into a new one based on the existing array. the resulting array is the same lenght as the original*/
+
+
+
+// now lets creat an array of people where each element is an object that represents a person
+const people =[
+
+{
+name: "tom cruise",
+age: 35,
+occupation: "web developer"
+
+},
+
+{
+name: "paul aibi",
+age: 26,
+occupation: "teacher"
+},
+
+{
+name: "andy nloga",
+age: 19,
+occupation: "student"
+
+}
+
+]
+
+// 1-now lets use the map method to give us a new array containing each person's name
+
+const names = people.map(nameFunction)
+
+ function nameFunction(person) {
+
+return person.name;
+}
+console.log(names); // we will have an array of only the names
+
+/*the person function passed in can be immagined as a conversion or call back function
+the function actually applies to every single item inside the array */
+
+
+
+// 2- lets use the map function create an array that gives us the ages only
+
+let ages = people.map( eta =>{
+   return eta.age; 
+
+});
+
+console.log(ages); // i will have an array of the ages.
+
+
+// 3- lets use the map function to create an array that onnly gives use the family names of our people
+let cognome = people.map( noms =>{
+
+    return noms.name.split(" ")[1];
+
+})
+
+console.log(cognome)
+
+// 4- lets now return the name and ages 
+
+const nameAge = people.map(myWholeFunction)
+
+function myWholeFunction (person1){
+  return   `${person1.name} ${person1.age}` + "<br>"
+          
+}
+
+document.write(nameAge)
+
+// Lets use the map function to give us the sqaure of each element in our array
+
+const array=[1,2,3,4,5]
+
+const square = array.map(myFunction) 
+
+function myFunction(num){
+    return num*num
+}
+
+console.log(square) // this will give us the array [1,4,9,16,25]
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

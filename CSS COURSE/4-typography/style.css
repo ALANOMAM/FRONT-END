@@ -1,0 +1,26 @@
+/* Typography is the way that text is arranged and presented*/
+
+body{
+    padding:10%;
+    font-size: 2rem; 
+    
+}
+
+input,button{
+    font:inherit;   
+/*this is done because we have to explicitely
+say that our input and button inherit the font-size
+we gave to the body. bc they do not iherit automatically*/
+}
+
+p{
+ /* below we will see some commonly used text settings*/   
+text-decoration:underline;  /* the "text-decoration:" is one.*/
+text-transform: uppercase; /* the "text-transform:" is also another*/
+text-align:center; /* generally the default is text align left for paragraphs but we can play with it*/
+line-height: 1.5; /* it changes the distance between the various lines of the paragraph*/
+letter-spacing: 0.2em;
+word-spacing: 0.2em;
+
+
+}

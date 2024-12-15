@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body{
+background-color:blanchedalmond;
+}
+
+/* PRIMO LAYOUT START*/
+
+.container *{
+    border: 1px dotted red;
+}
+
+.container{
+display:flex;
+gap:12px; /* mi da lo spazio tra main e aside*/
+max-width:1200px; /* better to use this instead if width for interactive and flexibility purpose */
+min-width:700px; /* se riduco le dimensoni dello schermo sulla larghezza, si ferma tutto quando arriviamo ad una misura del main di 700px */
+margin-right: auto;
+margin-left: auto;
+
+ padding: 12px;
+
+ min-height: 1000px; /**/
+}
+
+.container aside{
+width:300px; /* Dimensione fissa*/
+background-color:lightskyblue;
+}
+
+.container main{
+flex-grow:1; /*Prende il resto dello spazio del contenitore e si muove quando cambio la misura del vieport */
+background-color:pink
+
+}
+
+/* PRIMO LAYOUT END*/

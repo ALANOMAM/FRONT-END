@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body>
+<h1 id="title">grande</h1>
+<h2 id="pippo">medio</h2>
+<h3 id="pappo">piccolo</h3>
+
+<P class="family">MI CHIAMO ALAN</P>
+<P class="family">MI CHIMAO ANDY</P>
+<P class="family">MI CHIMAO DEBORA</P>
+<P class="family">MI CHIMAO GIADA</P>
+
+<a href="#">link</a>
+
+
+<ul>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+<li>4</li>
+</ul>
+
+<script>
+/*il query selctor all funziona quasi come gli altri queryselectors, solo che 
+in questo caso se seleziono una lista di elementi ho un array e non un fac simile*/
+ 
+const item=document.querySelectorAll("li"); // ovviamente anche qui posso passare elemnti per classe, per id ecc.
+
+for(  i=0;i<item.length;i++){
+item[i].style.color="red";
+} // tutti gli elementi della mia lista diventeranno rossi.
+
+</script>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

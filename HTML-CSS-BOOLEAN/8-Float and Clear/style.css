@@ -1,0 +1,111 @@
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* inizio container 1*/
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;  
+}
+
+.container1{
+    border: 2px solid blue;
+    margin-top: 100px;
+    height: 300px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.container1 div:nth-child(1){
+    float: right;
+}
+
+.container1 div:nth-child(2){
+    float: left;
+}
+/* inizio container 1*/
+
+
+/* inizio container 2*/
+.container2{
+    
+    height: 300px;
+    border-style: solid;
+    margin-top: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+
+}
+
+.divs{
+    width: 100px;
+    height: 100px;
+    background-color: aliceblue;
+    border-style: solid;
+    float: left; /* qui tutti i div si metteranno uno vicino all'altro e tutti a sinistra del loro contenitore*/
+}
+/* inizio container 2*/
+
+/* inizio clear*/
+.container3{
+    height: 300px;
+    border-style: solid;
+    margin-top: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.div1 {
+    float: left;
+    padding: 10px;
+    border: 3px solid #73AD21;
+  }
+  
+  .div2 {
+    padding: 10px;
+    border: 3px solid red;
+  }
+  
+  .div3 {
+    float: left;
+    padding: 10px;  
+    border: 3px solid #73AD21;
+  }
+  
+  .div4 {
+    padding: 10px;
+    border: 3px solid red;
+    clear: left;
+  }
+
+/* fine clear*/
+
+/* inizio CLEARFIX */
+.container4{
+    border-style: solid;
+    margin-top: 20px;
+}
+
+.container4 div {
+    border: 3px solid #4CAF50;
+    padding: 5px;
+  }
+  
+  .img1 {
+    float: right;
+  }
+  
+  .img2 {
+    float: right;
+  }
+  
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+/* fine CLEARFIX */

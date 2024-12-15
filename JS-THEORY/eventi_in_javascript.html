@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+#box1{
+width: 200px;
+height:200px;
+background-color: lightblue;
+}
+
+#box2{
+width: 200px;
+height:200px;
+background-color: lightpink;
+}
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+<ul>
+<li id="primo_li"> 1 <a href="#">click_me</a></li>
+<li>2</li>
+<li>3</li>
+<li>4</li>
+</ul>
+
+<div id="box1" onclick="alert('yooo per il blue')"></div>
+<!--questo e gia una forma di avento. se clicco nel mio
+ quadrato avrò l'alert.Invece di "onclick" posso
+avere varie cose ad esempio "onmousever","ondrag","onchange"ecc -->
+
+
+<div id="box2"></div>
+
+
+
+<script>
+/* gli eventi in js ci permettono di percepire cosa succede allinterno della nostra pagina 
+e creare reazioni dinamiche di conseguenza
+scriviamo dei programmi che facciano delle cose se clickiamo il link*/
+
+/*
+//1-programma che dice "bottone cliccato" nella console ogni volta che clicco sul link
+document.querySelector("a").addEventListener("click",onClick)
+
+function onClick(){
+ console.log("bottone cliccato");   
+ }
+                                                            
+ // con "addEventListener("evento",funzione)" abbiamo a disposizione una marea cose da poter percepire
+*/
+
+
+
+/*
+//2-fare un evento con addEventlistener che faccia la stessa cosa del "onclick" del quandrato blue su quello rosa
+
+ const boxDiv =document.getElementById("box2");
+ boxDiv.addEventListener("click",onClick);
+
+ function onClick(e){
+ alert("yoooo per il rosa");
+
+ }
+
+*/
+
+
+ //                      EVENT OBJECT
+
+  /* an event object gives us informations about an event.
+  it is often writen as the parameter of our function either
+  "e" "ev" or "event"*/ 
+
+  
+  //lets take for exanmple our onclick event for the pink square
+const boxDiv =document.getElementById("box2");
+ boxDiv.addEventListener("click",onClick);
+
+ function onClick(e){
+ console.log(e); 
+ //with this line every time we click the pink square we will have 
+ //a series of informations printed out in our console
+// the informations could be coordinates clicked, is an alert presnet ecc.
+ }
+                
+
+</script>
+
+
+
+
+
+
+</body>
+
+</html>

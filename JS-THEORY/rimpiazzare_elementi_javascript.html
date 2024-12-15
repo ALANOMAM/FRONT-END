@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body>
+<h1 id="title">grande</h1>
+<h2 id="pippo">medio</h2>
+<h3 id="pappo">piccolo</h3>
+
+<P class="family">MI CHIAMO ALAN</P>
+<P class="family">MI CHIMAO ANDY</P>
+<P class="family">MI CHIMAO DEBORA</P>
+<P class="family">MI CHIMAO GIADA</P>
+
+<a href="#">link</a>
+
+
+<ul>
+<li id="primo_li">1</li>
+<li>2</li>
+<li>3</li>
+<li>4</li>
+</ul>
+
+
+<script>
+//cerchiamo di ripiazzare il primo li con unaltro creato da noi
+
+//creazione nuovo li
+const nuovoLi=document.createElement("li");
+ nuovoLi.id="primo_li";
+ nuovoLi.appendChild(document.createTextNode("1 NUOVO"));
+
+//selezione vecchio li
+const primoLi = document.getElementById("primo_li")
+ 
+//rimpiazzare
+const ul = document.querySelector("ul");
+ul.replaceChild(nuovoLi,primoLi);
+
+
+                  //ELIMINARE ELEMENTO
+//possiamo anche eliminare alcuni elementi 
+
+const lis = document.querySelectorAll("li");
+lis[2].remove();
+</script>
+
+
+
+
+
+
+
+</body>
+
+</html>

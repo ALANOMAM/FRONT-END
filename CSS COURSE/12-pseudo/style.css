@@ -1,0 +1,63 @@
+/* there are two kinds of pseudos, PSEUDO CLASSES
+and PSEUDO ELEMENTS. a pseuda class is a selector that
+selects elements that are in a specific state. A pseudo
+element has the same logic except its more specfic and generally
+is caracterised by the use of two semi columns instead of one like in the pseudo class*/
+
+
+
+body{
+background-color: blanchedalmond;
+
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+img{
+    border-radius: 150px;
+}
+
+.box{
+    border-style: solid;
+    margin-top: 20px;
+    border-width: 1px;
+    border-radius: 6px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(216, 122, 122);
+
+}
+
+.container{
+    width: 50%;
+   
+}
+
+.box:hover{
+ /*this is an example of a pseudo class*/   
+background-color: rgb(138, 110, 110);
+}
+
+.box img[alt]{
+    /* this is another pseudo class example that makes sure that we higlight
+    the images that have the "alt" atribute*/
+    border: 5px solid red;
+}
+
+
+.container p::after{
+    /* this is an example of a pseudo element.
+    here i selected the container class, then the paragraph element
+    and using the "after" speudo element i added somthing to my paragraph*/
+    content: '  ( ADDED PART)';
+}
+
+.container p::before{
+    content: '(ADDED PART) '
+}
+
+/* NB: checkout the "is" , "where", "target"  pseudo classes*/

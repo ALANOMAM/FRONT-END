@@ -1,0 +1,28 @@
+*{
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+border: 1px red solid;
+}
+
+body{
+    background-color: blanchedalmond;
+}
+
+/* al conntenitore 1 ho dato 100vh di altezza, infatti per questo occupa tutto lo schermo visibile e bisogna scrollare 
+per vedere il secondo contenitore */
+.container1{
+background-color: brown;
+width: 100%;
+height: 100vh;
+}
+
+
+/* al contenitore 2 ho dato 100%, quindi cerca di occupare 100% dell'altezza del suo genutore che nel nostro caso è body
+però il body non ha una altezza stabilita quindi il contenitore 2 non cresce. Infatti se andiamo a dare una misura al body height
+il contenitore crescerà automaticamente*/
+.container2{   
+    background-color: aquamarine;
+    width: 100%;
+    height: 100%;
+}

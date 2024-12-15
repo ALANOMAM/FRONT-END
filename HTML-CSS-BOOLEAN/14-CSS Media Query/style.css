@@ -1,0 +1,56 @@
+
+/* I media query ci fanno entrare nella dimensione dei responsive
+   permette di rendere il nostro layout dinamico e adattabile a piu 
+   dispositivi diversi e dimensioni di sechermo diversi
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* reset */
+
+.container {
+    border: dotted 1px red;
+    /* test */
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 12px;
+
+
+
+}
+
+
+.square {
+    width: 100px;
+    height: 100px;
+
+    background-color: #3535ec;
+
+}
+
+
+
+/* media query che applichi i selettori dai 479px in su */
+
+/* dallo schermo 479px di larghezza in su */
+@media screen and (min-width: 479px) {
+    .container {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .square {
+        background-color: #f71668;
+    }
+}

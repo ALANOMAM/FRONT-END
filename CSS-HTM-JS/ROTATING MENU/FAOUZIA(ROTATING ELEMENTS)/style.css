@@ -1,0 +1,92 @@
+*{
+    margin:0;
+    padding:0;
+    }
+    
+    
+    .main{
+   background:gray;
+   width:100%;
+   height:100vh;
+   overflow: hidden;
+   position: absolute;
+}
+
+    
+    #circle{
+        width: 1000px;
+        height: 1000px;
+        border-radius: 50%;
+       position:absolute; /* the circle will have the top and lef coordinates linked to our window browser and by extention the elements inside our circle, since the circle is a div*/
+       top:-60px;
+       left:0;
+       transform: rotate(0deg); /* this will be saved in the varible we will create in js*/
+       transition:1s; /*the time between each rotation once the up or down arrow is clicked*/
+     }
+    
+     .image1{
+        border-radius: 50px;
+        position: relative;
+        top:300px;
+        left:350px;
+        box-shadow: 5px 5px 5px gray;
+     }
+    
+    
+    
+    /* POSITIONING THE ELEMENTS IN A CIRCULAR POSTION*/
+    .albums{
+        position: absolute; /* the family elements will be positioned relative to our browser window*/
+        font-size: 20px;
+    }
+    .album1{
+        top:500px;
+        right: 120px;
+        color:white;
+    }
+    
+    .album2{
+        top:150px;
+        right:430px;
+        transform: rotate(-90deg);
+        color:white;
+    }
+    
+    .album3{
+        bottom:500px;
+        left: 130px;  
+        transform: rotate(-180deg);
+        color:white;
+    }
+    
+    .album4{
+        bottom:150px;
+        right: 460px; 
+        transform: rotate(-270deg);
+        color:white;
+    }
+    
+    
+    /* CONTROLS */
+    .controls{
+    position: relative;
+    left: 1100px;
+    top:70px;
+    color: white;
+    font-size: 30px;
+    
+    }
+    
+    /*OVERLAY*/
+    .overlay{
+        width: 0;
+        height: 0;
+        border-top: 500px solid white;
+        border-right: 500px solid transparent;
+        border-bottom: 500px solid white;
+        border-left: 500px solid white;
+        position: absolute;
+        left:0;
+        top:0;
+    }
+    

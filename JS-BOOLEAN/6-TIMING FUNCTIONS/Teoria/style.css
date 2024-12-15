@@ -1,0 +1,27 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    margin-top: 100px;
+    padding: 40px;
+    font-size: 30px;
+    font-family: sans-serif;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    background-color:whitesmoke
+}
+
+button{
+    font-size: 20px;
+    padding: 5px;
+}

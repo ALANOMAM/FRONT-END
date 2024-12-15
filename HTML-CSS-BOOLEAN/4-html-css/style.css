@@ -1,0 +1,55 @@
+/* TERZO MODO PER STILIZZARE*/
+
+body{
+    background-color:bisque;
+}
+
+/* gli id devono essere unici*/
+#titolo-secondario{
+background-color: azure;
+color:black;
+}
+
+#titolo-terziario{
+  background-color: lightpink;
+  color:black;
+}
+
+span{
+    background-color: brown;
+    color: black;
+}
+
+/* a differenza degli id, le classi possono essere condivise tra più elementi */
+.paragraph{
+    font-weight: bold;
+    color: green;
+}
+/* Da notare che anche se ho dato un colore verde alle lettere del 
+paragrafo quelli in mezzo agli span rimangono con lo stile span.
+Questo è per via delle REGOLE DI SPECIFICITA */
+
+/*
+ regola di specificità:
+
+ -gli id sovrascrivono tutto
+ -le classi sovrascrivono i selettori tag
+ -i tag sovrascrivono lo stile user agent
+ */
+
+ div{
+    width: 200px;
+    height: 200px;
+      /* ci sono delle proprietà che sono abbreviate */
+      border: 2px solid black;
+      /* questo ci permette di settare più proprietà contemporaneamente */
+      /* ad esempio con la regola di prima abbiamo ottenuto il risultato uguale a queste 3 successive */
+      /* 
+      border-color: black;
+      border-width: 2px;
+      border-style: solid; 
+      */
+  
+      background-color: green;
+
+ }

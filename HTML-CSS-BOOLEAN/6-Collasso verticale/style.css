@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.square{
+    width:100px;
+    height:100px;
+
+    background-color:brown;
+    border:solid 1px ;
+}
+
+/*  COLLASSO VERTICALE
+i margini superiori, top e bottom tra due elementi adiacenti 
+verticalmente non si sommano e bensi 
+COLLASSANO TRA LORO,ovvero ha priorita quello col margine maggiore. 
+Stiamo indicando la distanza minima. tra le due entità.
+
+Nel nostro esempio sotto la distanza tra le due scatole sarà di 30 px fisso, il 20px collasserà
+dentro quella distanza. se però cambiamo da 20px a 40px la distanza minima tra le due scatole 
+sarà di 40px e la scatola 2 andrà giù di altri 40 px*/
+
+.square1{
+margin-bottom:30px ;
+ 
+}
+
+.square2{
+  margin-top:20px ;  
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+/* NON ESISTE IL COLLASSO ORIZONTALE
+cioe i margin left e right di due elementi vicini tra loro si sommano. Nel nostro caso sotto infatti,
+la distanza tra i due quadrati sarà di 50px, 30px del magin right di uno e 20px del margin left
+dell'altro.*/
+
+.square3{
+ background-color: pink;
+ display: inline-block; 
+ margin-right: 30px;
+   
+  }
+  
+.square4{
+    background-color: pink;
+    display: inline-block;
+    margin-left: 20px;
+  }

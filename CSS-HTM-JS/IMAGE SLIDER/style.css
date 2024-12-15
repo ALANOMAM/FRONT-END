@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+   align-items:center ;
+    background: #23E3C9;
+}
+
+.slider{
+    width: 800px;
+    height:500px;
+    border-radius:10px;
+    overflow: hidden; /* con questo abbiamo una imagine alla volta di fronte, altrimenti avremo una fila di imagini*/
+}
+
+.slides{
+    width: 500%;
+    height: 500px ;
+    display: flex;
+
+}
+
+.slides input{
+    display: none;/* nasconde le palline*/
+}
+
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img{
+    width: 800px;
+    height:500px ; /* quetso è solo per rendere l'imagine piu centrata dentro il suo quadro*/
+}
+
+/* css for manual slide navigator*/
+.navigation-manual{
+    position: absolute;
+    width:800px ;
+    margin-top: 450px;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.manual-btn{ /* per dare la forma rotonda ai nostri pulsanti sotto, sono diverse dalle palline nascoste sopra*/
+    border: 2px solid #40d3dc;
+    padding:5px;
+    border-radius:10px ;
+    cursor: pointer;
+transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background: #40d3dc ;
+}
+/*when you click and the images slide (for this we dont need javascript*/
+#radio1:checked ~ .first{
+    margin-left:0;
+}
+#radio2:checked ~ .first{
+    margin-left:-20%;
+}
+#radio3:checked ~ .first{
+    margin-left:-40%;
+}
+#radio4:checked ~ .first{
+    margin-left:-60%;
+}
+/*when you click and the images slide*/
+
+/*css for automatic navigation*/
+.navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top:60px ;
+}
+
+.navigation-auto div{
+    border: 2px solid #40d3dc;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+/* questi rappresentano le palline sopra, in poche parole se clicclo una pallina sotto, la pallina sopra corrispondente alla pagina cliccata si evidenzia e rimane evidenziata*/
+.navigation-auto div:not(:last-child){
+   margin-right:  40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+background: #0c848b;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+background: #0c848b;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+background: #0c848b;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+background: #0c848b;
+}
+/* questi rappresentano le palline sopra, in poche parole se clicclo una pallina sotto, la pallina sopra corrispondente alla pagina cliccata si evidenzia e rimane evidenziata*/

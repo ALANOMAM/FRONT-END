@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* reset */
+
+
+.container {
+    padding: 12px;
+}
+
+
+.element  {
+    width: 200px;
+    height: 200px;
+
+    background-color: blue;
+
+
+}
+
+/* meno di 480px di larghezza */
+@media screen and (max-width: 480px) {
+    .element {
+        border-radius: 50%;
+    }
+}

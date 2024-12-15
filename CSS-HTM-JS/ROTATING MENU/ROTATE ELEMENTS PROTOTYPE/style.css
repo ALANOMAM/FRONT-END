@@ -1,0 +1,87 @@
+*{
+margin:0;
+padding:0;
+}
+
+
+.main{
+position: relative;   
+overflow: hidden; /* this is to hide the overflow of our big circle*/
+width:100%;
+height: 100vh; 
+background:linear-gradient(45deg,lightgreen,lightblue)
+}
+
+#circle{
+    width: 1000px;
+    height: 1000px;
+    border-radius: 50%;
+    border-style: solid;
+   position:absolute; /* the circle will have the top and lef coordinates linked to our window browser and by extention the elements inside our circle, since the circle is a div*/
+   top:0;
+   left:0;
+   transform: rotate(0deg); /* this will be saved in the varible we will create in js*/
+   transition:1s; /*the time between each rotation once the up or down arrow is clicked*/
+ }
+
+.tree1{
+    position: relative;
+   top:150px;
+   left: 200px;
+   z-index: 1;
+}
+
+
+/* POSITIONING THE ELEMENTS IN A CIRCULAR POSTION*/
+.family{
+    position: absolute; /* the family elements will be positioned relative to our browser window*/
+
+}
+.brothers{
+    top:450px;
+    right: 50px;
+    color:white;
+}
+
+.parents{
+    top:150px;
+    right:350px;
+    transform: rotate(-90deg);
+    color:white;
+}
+
+.grand-parents{
+    bottom:450px;
+    left: 50px;  
+    transform: rotate(-180deg);
+    color:white;
+}
+
+.great-grand-parents{
+    bottom:150px;
+    right: 350px; 
+    transform: rotate(-270deg);
+    color:white;
+}
+
+
+/* CONTROLS */
+.controls{
+position: relative;
+left: 1300px;
+top:-60px;
+
+}
+
+/*OVERLAY*/
+.overlay{
+    width: 0;
+    height: 0;
+    border-top: 500px solid white;
+    border-right: 500px solid transparent;
+    border-bottom: 500px solid white;
+    border-left: 500px solid white;
+    position: absolute;
+    left:0;
+    top:0;
+}

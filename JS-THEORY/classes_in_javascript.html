@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<script>
+/* A class is used to create one or more objects. generally the 
+class is not directly used in the program logic, but the objects 
+created by the class are the ones being used. 
+
+In a class definition we have two main cathegories, 
+1-WHAT THE OBJECT WILL HAVE.
+2-WHAT THE OBJECT WILL DO.
+
+class -> object
+
+instance properties: what they have
+-name
+-age
+-height
+
+instance methods: what they do
+-talk 
+-run
+-jump
+
+typically, an instace method will use instance properties to achieve thier results.
+*/
+
+
+                   //CLASS INTRODUCTION
+
+ /*                  
+class Rectangle{
+//constructor is used to setup the object. the instance properties are generally defined here
+ constructor(_width, _height,_color){
+
+this.width=_width; //instance property width
+this.height=_height;
+this.color=_color;
+ }
+//lets create the instance methods. generally under the constructor.
+getArea(){
+return this.width *this.height;  
+}
+
+printDescription(){
+console.log("i am a rectangle of "+this.width +" x "+this.height+ " and i am " +this.color);
+
+}
+}
+//end of class
+
+
+let myRectangle1=new Rectangle(1,5,"blue") // assagning values to instance properties.
+let myRectangle2=new Rectangle(2,6,"red")
+
+console.log(myRectangle1.getArea());//this will give me 5, we have taken an instance property and associated it with the isntance method getArea.
+console.log(myRectangle2.getArea());// this will give me 12
+
+
+console.log(myRectangle1.printDescription()); //this will print the dectription in the console using the properties of rectangle1
+console.log(myRectangle2.printDescription()); 
+
+*/
+
+                //GETTERS AND SETTERS
+/*
+      class square{
+
+constructor(_width){
+this.width=_width;
+this.height=_width;
+}
+
+//lets create a getter that gives us the result. getters behave like methods
+get area(){
+    return this.width*this.height;
+}
+//lets create a setter. setters give us the possibility to modify the values of our instance properties
+//this setter changes the value of the witdh and height  
+set area(area){
+this.width= Math.sqrt(area)
+this.height= this.width;
+}
+
+} 
+      
+  let square1=new square(4);   
+
+  console.log(square1.area); 
+
+  square1.area=25;//usefull for the setter in our case. giving a value to the area that we will use up.
+
+console.log(square1.width); //this will give us 5 in the console.
+console.log(square1.height);
+
+*/
+
+                 //STATIC METHOD
+ /*
+
+//static methods are generally linked to tha class but donnot require an instance of the class so they can work. in other words they donnot require "this." like every other method.               
+ class square {
+constructor(_width){
+this.width=_width;
+this.height=_width;
+
+}
+// lets create a static method that tells us if two squares are identical.
+static equals(a,b){
+return a.width*a.height === b.width*b.height; // ternary operator
+}
+
+
+ }   
+ 
+ let sqaure1 = new square(8);
+ let sqaure2 = new square(8);
+
+ console.log(square.equals(sqaure1,sqaure2)) //  it is gonna give us true or fals based on if the squares are equal.
+
+ */
+
+            //INHERITANCE AND EXTENDS
+
+ /* Inheritance basically helps us create a child class that 
+ has all the properties of a parent class and more it is usefull for code reusability
+ so that if we have classes that are linked by a certain number of properties 
+ insted of writing them every time we create a parent class with the common properties*/        
+
+
+/* 1
+
+// lets start with a class that doesn't need parameters to undestand the concept
+
+class Animal{
+
+constructor(){
+this.alive=true;
+}
+
+eat(){
+return "it has the capacity to eat"
+}
+
+ }
+
+
+
+ class Dog extends Animal{
+
+ }
+
+
+class Cat extends Animal{
+   
+ }
+
+
+ class Elephant extends Animal{
+ 
+ identity(){
+return "this is an elephant"
+ }   
+}
+
+const d = new Dog()
+const c= new Cat()
+const e = new Elephant()
+
+document.write(d.alive+"<br>") // i have "true" as output  even though the children classes are empty
+document.write(c.alive+"<br>")
+document.write(e.alive+"<br>")
+
+document.write(d.eat()+"<br>") // this will print out the phrase "it has the capacity to eat", even though the children classes are empty
+document.write(c.eat()+"<br>")
+document.write(e.eat()+"<br>")
+
+// obviously we can also add and access methods specific to children classes as below
+document.write(e.identity()) // this will print "this is an elephant" in the output.
+
+*/
+
+
+
+/* 2
+
+// now lets study classes with parameters.
+
+ class Person{
+
+constructor(_name,_age){
+this.name=_name;
+this.age=_age;
+}
+
+describe1(){
+
+return "i am "+this.name+ " and i am " +this.age+" years old"    
+}
+}
+//we are creating a class programmer that is also a person
+
+class Programmer extends Person{
+
+    constructor(_name,_age,_experience) {
+super(_name,_age);//this calls the attriibutes of the constructor in the parent class
+ 
+this.experience=_experience; //specific to only the child
+
+}
+
+code(){
+return this.name+" is coding";
+
+}
+
+describe2(){
+
+return "i am "+this.name+ " and i am " +this.age+" years old "+ " and i have been working for "+this.experience+" years."
+
+}
+
+}
+
+
+let persona = new Person("TOM HARDY", 26)
+let coder = new Programmer("JEFF CRUISE", 34,16)
+
+document.write(persona.describe1()+"<br>"); // persona ha acesso solo al metodo desribe1
+
+//Coder ha acesso al metodo "code" e "describe2" per struttura sua
+// ma ha anche acesso alla struttura del metodo "describe1" per ereditarietà
+document.write(coder.code()+"<br>");
+document.write(coder.describe2()+"<br>");
+document.write(coder.describe1()+"<br>");
+
+*/
+
+
+
+
+
+                       //POLYMORPHISM
+ // Polymorphism is the act of redefining a method inside a derived child class  of a parent                    
+
+ /*
+ class Animal{
+    constructor(_name){
+this.name=_name;
+}
+
+makeSound(){
+console.log(" generic animal sound");
+}
+ 
+
+ }
+
+class Dog extends Animal{
+
+constructor(name){
+super(name);
+
+}
+
+//now we want to modify the makeSound method here(aka polymorphism)
+makeSound()
+{
+console.log("woof woof");
+
+}
+
+}
+
+const a1 = new Animal("dom");
+const a2= new Dog("jeff");
+
+a1.makeSound(); // here in the console we will see "generic animal sound"
+a2.makeSound(); // here in the console we will see "woof woof" proving we could overright the makeSound method taken from the parent in the child.   
+*/
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

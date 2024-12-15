@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body>
+<h1 id="title">grande</h1>
+<h2 id="pippo">medio</h2>
+<h3 id="pappo">piccolo</h3>
+
+<div>
+<P class="family">MI CHIAMO ALAN</P>
+<P class="family">MI CHIMAO ANDY</P>
+<P class="family">MI CHIMAO DEBORA</P>
+<P class="family">MI CHIMAO GIADA</P>
+</div>
+
+<a href="#">link</a>
+
+
+<ul>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+<li>4</li>
+</ul>
+
+
+<script>
+//1 cerchiamo di creare un'altro li e metterlo sotto il 4
+ 
+//creare elemento:
+const myLi=document.createElement("li"); // creato un li e asegnato ad una variabile.
+
+//aggiungere classe a elemento:
+myLi.className="mia_classe";
+
+//aggiungere id:
+myLi.id="mia_id";
+
+//aggiungere attributi:
+myLi.title="titolo"; // qui potevo mettere un type input, date ecc.
+
+// creare text node e appendere ( cioe scrivere qualcosa nel nostro li):
+myLi.appendChild(document.createTextNode("nuovo li")); //in questa forma però si vede solo nella console.
+
+//aggiungere li a ul
+document.querySelector("ul").appendChild(myLi);
+
+
+// 2 creare un nuovo paragrafo da aggiungere sotto le mie frasi sopra.
+const newp = document.createElement("p")
+newp.appendChild(document.createTextNode("NUOVO PARAGRAFO"))
+document.querySelector("div").appendChild(newp)
+
+</script>
+
+
+
+
+
+
+
+</body>
+
+</html>

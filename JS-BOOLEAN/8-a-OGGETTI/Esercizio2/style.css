@@ -1,0 +1,55 @@
+ 
+ body{
+    background-color: rgba(2, 48, 71, 1)
+ }
+
+ .schema *{
+    border: 1px black solid;
+ }
+
+ .profile{
+    margin-top: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: whitesmoke;
+ }
+
+.img-name-date{
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+
+.name-date{
+    display: flex;
+    flex-direction: column;
+}
+
+ .profile-image{
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+ }
+
+ .profile-pic-default{
+   background-color: blueviolet;
+   padding: 20px;
+   border-radius: 50%;
+   color: white;
+ }
+
+ .big-img{
+    width: 100%;
+    height: 300px;
+ }
+
+ .on{
+    background-color: lightgray;
+    color:green;
+ }
+
+ 
+
+
+ 

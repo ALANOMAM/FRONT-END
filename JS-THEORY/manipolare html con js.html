@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+  <div id="test"></div>  
+<script>
+
+/* 
+var test= document.getElementById("test"); // tramite getElementById, guarda in tutta la pagina, trova l'elemento html che ha come ID "test" e lo mette dentro la nostra variabile.
+test.innerHTML="frase iniettata"; // tramite innerHTML possiamo iniettare quello che vogliamo dentro la nostra variabile test che corrisponde ad un elemento html con id "test" cioe dentro il div.
+//NOTA: innerHTML sovrascrive quello che ce gia dentro l'elemento, quindi bisogna stare attenti.
+*/
+
+/*
+var test=document.getElementById("test");
+test.innerHTML="<div> <button> hello world </button> </div>"; //infatti qui ho appena inettato un bottone con scritto "hello world" dentro il div sopra 
+*/
+
+var test=document.getElementById("test");
+var button="";
+for(var i=0; i<6; i++) // ho messo il buttone di prima dentro un ciclo che lo ripete finch voglio io, molto piu veloce di creare un bottone alla volta solo con html.
+{
+button=button + "<div> <button> hello world </button> </div>";
+}
+test.innerHTML=button;
+test.style.background="yellow"; // con questo posso toccare gli elementi di stile (cioe le proprietà css) della nostra div con id test tramite js. avrà un background giallo.
+
+</script>
+
+</body>
+
+
+ 
+
+
+
+
+
+
+
+
+</html>

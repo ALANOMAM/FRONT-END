@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* reset */
+
+
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* gap: 1em; */
+
+    max-width: 1200px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 12px;
+
+}
+
+
+.container .row {
+    display: flex;
+    gap: 12px;
+    /* gap: 1em; */
+}
+
+
+.container header {
+    width: 100%;
+
+    background-color: #9a9af5;
+
+    padding: 30px;
+
+}
+
+
+/* sezione aside  */
+.container aside {
+    align-self: flex-start;
+    /* non ti devi restringere se gli altri elementi con cui condividi lo spazio
+    flex hanno bisogno di espandersi
+    */
+    flex-shrink: 0;
+
+    width: 300px;
+
+    padding: 20px;
+
+    background-color: #3535ec;
+}
+
+.container h2 {
+    margin-bottom: 1em;
+}
+
+.container aside ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    list-style-type: none;
+    color: white;
+
+}
+
+.container aside ul a {
+    display: block;
+
+    padding: 6px;
+
+    color: white;
+    background-color: red;
+}
+
+/* fine sezione aside */
+
+
+/* sezione main */
+.container main {
+
+    flex-grow: 1;
+
+    padding: 20px;
+
+    background-color: #f71668;
+    color: white;
+}
+
+
+.container main h2 {
+    margin-bottom: 1em;
+}
+
+.container main article {
+
+    padding: 8px;
+
+    margin-bottom: 8px;
+
+    background-color: rgba(20%, 20%, 20%, .2);
+}
+
+.container main article p {
+    margin-bottom: 6px;
+}
+
+
+
+/* sezione pubblicità */
+
+.container aside .adv-container {
+    display: flex;
+    justify-content: center;
+}
+
+.container aside .adv-container .adv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    width: 180px;
+    height: 180px;
+
+    padding: 24px;
+
+    margin-bottom: 16px;
+
+    color: white;
+    background-color: #126c58;
+
+    text-align: center;
+    font-family: sans-serif;
+}
+
+/* fine sezione pubblicità */
+
+
+
+/* fine sezione main */
+
+
+
+
+
+.container footer {
+    width: 100%;
+
+    padding: 24px;
+
+    background-color: #9a9af5;
+}

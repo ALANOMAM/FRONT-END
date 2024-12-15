@@ -1,0 +1,55 @@
+
+*{
+ margin: 0;
+ padding: 0; 
+ box-sizing: border-box;  
+}
+
+
+.nowrap{
+    white-space: nowrap;
+}
+
+
+body{
+
+ background-color: blanchedalmond; 
+ min-height: 100vh;  
+}
+
+
+.hero{
+    border-bottom:2px solid black;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+align-items: center;
+gap:30px;
+
+background-color: rgb(249, 231, 127); /*in case our bacground image does not load*/
+background-image:url('maps.png') ;
+background-repeat: repeat; 
+/* this is generally the default value for "background-repeat"
+we can also have a "no-repeat", "repeat-x" ad "repeat-y" ecc
+for our background-repeat property.*/
+}
+
+.h1{
+    font-size: 500%;
+    color:brown;
+    text-shadow: 2px 2px 5px black ;
+}
+
+.profile-pic-figure{
+width:35%;
+}
+
+.profile-pic-figure img{
+    width: 100%; /*this makes the image take 100% of the width of its container*/
+    height: auto;/*this makes it so that the height ajusts to the width*/
+    /*the changes above make the image more responsive
+    to any variation of the brouser or window size*/
+min-width:100px; /*the image wont get smaller than that*/
+border:2px solid black;
+border-radius: 50%;
+}

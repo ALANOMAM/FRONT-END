@@ -1,0 +1,102 @@
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html{
+    font-size: 1.5rem;
+}
+
+
+
+body{
+    background-color: blanchedalmond;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+main{
+   flex-grow:1;
+   display: flex; 
+   flex-flow: column nowrap;
+   justify-content: center;
+   align-items: center;
+   gap:1rem; 
+
+}
+
+div{
+    width: 200px;
+    height:200px;
+    border: 1px solid black;
+    display: grid;
+    place-content: center;
+
+}
+
+div:first-child{
+    background-color: rgb(199, 236, 236);
+    /* transform: translatex(50%); */ /* the box will move 50% of the width of the div in the x direction. so it is always a percentage of the element itself.*/
+    /* transform: scalex(50%); */
+    
+}
+
+div:nth-child(2){
+    background-color:rgb(169, 169, 109);
+    /* transform: translatey(1rem); */ /* we dont always have to use percentages*/
+    /* transform: scaley(120%); */
+}
+
+div:nth-child(3){
+    background-color:pink;
+    /* transform: translate(100%,2rem); */ /* the first value is x and the second is y*/
+    /* transform: rotatez(78deg); */ /*this rotates around the z axis, of course we also have rotate x and rotate y*/
+}
+
+div:nth-child(4){
+background-color:rgb(202, 118, 118);
+/*transform: scale(50%, 50%);*/ 
+}
+
+div:hover{
+    background-color:midnightblue;
+    transition-property:background-color, transform;
+    transition-duration: 2s; /* it takes 2 second to finish the tansition*/
+    transition-delay: 0.5s; /* we wait 0.5 seconds to start the transition*/
+}
+
+div:nth-child(2):hover{
+transform: rotate(180deg); /* rotate and rotatez are the same, so this applies a rotation around the z axis*/
+transition-duration: 3s;
+}
+
+/* create an animation start */
+.animate{
+    animation-name:slide;
+    animation-duration: 5s;
+    animation-timing-function:ease-in-out ;
+animation-delay: 1s;
+animation-iteration-count: 5; /* how many times i want this to repeat*/
+
+}
+
+@keyframes slide{
+    /* 0% means at the begining of the animation*/
+    0%{
+        transform: translateX(0);
+    }
+    /* 33% means at 1/3 of the way through the animation*/
+    33%{
+        transform: translateX(600px) rotate(180deg);
+    }
+    66%{
+        transform: translateX(-600px) rotate(-180deg);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+/* create animation end */

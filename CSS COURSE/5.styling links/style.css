@@ -1,0 +1,34 @@
+body{
+background-color: blanchedalmond;
+}
+
+a{
+text-decoration: none; 
+/* the default the property above is "underline"
+and by giving none i remove the line under the links 
+in the anchor tag*/
+cursor:pointer;
+/*when we hover over links the default settings make the 
+arrow turn into a finger(pointer). we are gonna leave it like that
+now but we can change if we want*/
+color:blue;
+/*this is the color oour link will have before we click on it*/
+}
+
+a:visited{
+    color:purple;
+    /*we just used a pseudo class to make our 
+    link turn purple once visited*/
+
+}
+
+a:hover{
+    color:dodgerblue;
+}
+
+a:active{
+    color:pink;
+    /*we just used a pseudo class to make our 
+    link turn pink once we click on it, as long as we dont 
+    release the link the pink will remain*/
+}

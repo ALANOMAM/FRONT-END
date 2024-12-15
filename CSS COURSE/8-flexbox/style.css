@@ -1,0 +1,44 @@
+*{
+/* basic css reset*/
+margin:0;
+padding:0;
+box-sizing: border-box;
+}
+
+
+body{
+  background-color: blanchedalmond;  
+  font-size: 2rem;
+  min-height: 100vh;
+  padding:20px;
+}
+
+.container{
+max-width: 800px;
+min-height: 400px;
+margin-inline: auto;
+border:1px solid black;
+
+/*what we added*/
+display: flex;
+justify-content:center; /*this moves the elements on the x axis*/
+align-items: center; /*this moves the elements on the y axis*/
+gap:1rem;
+flex-direction: row; /* this will order element in a row. we can also have columns ecc.*/
+flex-wrap: wrap; /*this makes it so that when we resize our page the elements rearange*/
+align-content: space-evenly ;
+/*what we added*/
+}
+
+.box{
+min-width: 100px;
+height:100px;
+background-color: black;
+color: white;
+padding: 0.5rem;
+
+/*what we adde*/
+display: flex;
+justify-content: center;
+align-items: center;
+}
